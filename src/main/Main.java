@@ -31,7 +31,7 @@ public class Main {
             return;
         }
 
-        // Customer
+        // Customer +
         Bag bag = new Bag();
         Customer customer = new Customer(menu, balance, bag);
         customer.buyItem(toBuy);
