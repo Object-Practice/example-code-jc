@@ -1,4 +1,4 @@
-package main.menu.item;
+package main.menu.itemManager;
 
 public class ItemFactory {
 
