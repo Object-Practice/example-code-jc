@@ -1,19 +1,21 @@
 package main.customer.bag;
 
+import main.menu.toBuy.ToBuy;
+
 import java.util.ArrayList;
 
 public class Bag {
-    ArrayList<String> purchasedItemList;
+    ArrayList<ToBuy> purchasedItemList;
 
     public Bag() {
-        this.purchasedItemList = new ArrayList<String>();
+        this.purchasedItemList = new ArrayList<ToBuy>();
     }
 
-    public void putItem(String purchasedItem) {
-        this.purchasedItemList.add(purchasedItem);
+    public void putItem(ArrayList<ToBuy> purchasedItem) {
+        this.purchasedItemList.addAll(purchasedItem);
     }
 
-    public ArrayList<String> getItemList() {
+    public ArrayList<ToBuy> getItemList() {
         return this.purchasedItemList;
     }
 }

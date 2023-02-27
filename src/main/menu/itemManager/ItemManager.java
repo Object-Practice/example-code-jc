@@ -23,7 +23,7 @@ public abstract class ItemManager {
         return stock;
     }
 
-    public void releaseStock(int amount) {
+    public void decreaseStock(int amount) {
         stock -= amount;
     }
 }
