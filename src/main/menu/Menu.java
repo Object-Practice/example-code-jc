@@ -19,7 +19,7 @@ public class Menu {
         return null;
     }
 
-    public Boolean hasItem(String toBuy) {
+    public boolean hasItem(String toBuy) {
         if (getItem(toBuy) != null) return true;
         return false;
     }

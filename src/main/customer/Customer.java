@@ -3,29 +3,24 @@ package main.customer;
 import main.customer.balance.Balance;
 import main.menu.Menu;
 import main.customer.bag.Bag;
-import main.menu.item.Item;
-
-import java.util.ArrayList;
 
 public class Customer {
-    private Menu menu;
     private Balance balance;
     private Bag bag;
 
     // [?] Menu가 아닌 Service로 만들어 주면 조금 더 문맥에 독립적이지 않을까?
-    public Customer(Menu menu, Balance balance, Bag bag) {
-        this.menu = menu;
+    public Customer(Balance balance, Bag bag) {
         this.balance = balance;
         this.bag = bag;
     }
 
-    public void buyItem(String toBuy) {
-        if (!this.menu.hasItem(toBuy)) {
+    public void buyItem(String toBuy, Menu menu) {
+        if (!menu.hasItem(toBuy)) {
             System.out.println("존재하지 않는 상품입니다.");
             return;
         }
 
-        int price = this.menu.getItemPrice(toBuy);
+        int price = menu.getItemPrice(toBuy);
         balance.payFor(price);
         String purchasedItem = menu.offerItem(toBuy);
         this.bag.putItem(purchasedItem);
