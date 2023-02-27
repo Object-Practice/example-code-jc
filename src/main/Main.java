@@ -20,7 +20,7 @@ public class Main {
 
         // Customer Input -> 이 부분도 나중에 떼기
         int balanceQuantity = 3000;
-        String toBuy = "메로나";
+        String toBuy = "메로나"; // Todo Cart도 넣기
         String payment = "cash";
 
         // Customer

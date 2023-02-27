@@ -4,6 +4,10 @@ package main.customer.balance;
 public abstract class Balance {
     protected int quantity;
 
+    public Balance(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void payFor(int price) {
         quantity -= price;
     }
